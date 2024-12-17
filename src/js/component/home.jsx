@@ -33,10 +33,18 @@ const Home = () => {
 		} return () => clearInterval(interval);
 	} , [active,select]);
 
+		// const [hiddenPurple, setHiddenPurple] = useState (false);
+		// console.log(hiddenPurple);
+		// const hidden = () =>{
+		// 	setHiddenPurple(true);
+		// 	console.log(hiddenPurple);
+		// }
+
+
 
 	
 	return(
-	<>
+	<main>
 
 		<div className="traffic">
 
@@ -53,19 +61,27 @@ const Home = () => {
 				<div className= {`green ${select == "green" ? "light-green" : ""}`}
 				onClick={() => changeColor("green")}>
 				</div>
+
+				 {/* <div className="purple visually-hidden" 
+				style={{display : hidden === false ? "none" : "inline-block",
+					backgroundColor: "purple", boxShadow: "0 0 20px 10px whitesmoke"}}
+				onClick={() => hidden("purple")}>
+				</div>  */}
 			</div>
 
 		</div>
-		
-		<div className="buttons">
 
-		<button type="button" className="btn btn-info" onClick={() => setActive (!active)}>Active</button>
+		{/* <div className="button-purple">
+			<button type="button" className=" purple btn btn-warning" onClick={() => setHiddenPurple ()}>Purple</button>
+		</div> */}
 
+		<div className="button-active">
+			<button type="button" className=" active btn btn-info" onClick={() => setActive (!active)}>Auto</button>
 		</div>
 
 	
 	
-	</>
+	</main>
 
 
 
